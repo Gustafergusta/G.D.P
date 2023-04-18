@@ -1,0 +1,18 @@
+1.cadpac.codpac *
+2.cadpac.nomepac *
+3.cadpac.cartaosus 
+4.cadpac.sexo
+5.cadpac.datanasc *
+6.cadpac.nomepai
+7.cadpac.nomemae
+8.cadpac.conjuge
+9.cadpac.cpfpac *
+10.cadpac.rgpac *
+11.arqatend.codpac
+12.arqatend.numatend
+13.arqatend.tipoatend *
+14.arqatend.cidprin
+15.arqatend.cidsec
+16.arqatend.datatend
+17.arqatend.datasai
+18.arqatend.observ
