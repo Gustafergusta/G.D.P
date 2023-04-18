@@ -240,14 +240,14 @@ namespace Consulta_Pacientes
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(225, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1693, 80);
+            this.panel2.Size = new System.Drawing.Size(1693, 74);
             this.panel2.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1391, 6);
+            this.label3.Location = new System.Drawing.Point(1371, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 23);
             this.label3.TabIndex = 3;
@@ -260,9 +260,9 @@ namespace Consulta_Pacientes
             this.comboBox1.Items.AddRange(new object[] {
             "C. I. A. S. Nossa Senhora do Caminho",
             "C. I. A. S. Nossa Senhora de Fatima"});
-            this.comboBox1.Location = new System.Drawing.Point(1395, 32);
+            this.comboBox1.Location = new System.Drawing.Point(1375, 32);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(277, 36);
+            this.comboBox1.Size = new System.Drawing.Size(297, 36);
             this.comboBox1.TabIndex = 2;
             // 
             // lblMenu
@@ -294,7 +294,7 @@ namespace Consulta_Pacientes
             // 
             this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(205)))), ((int)(((byte)(209)))));
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.Location = new System.Drawing.Point(225, 80);
+            this.panelShadow.Location = new System.Drawing.Point(225, 74);
             this.panelShadow.Name = "panelShadow";
             this.panelShadow.Size = new System.Drawing.Size(1693, 10);
             this.panelShadow.TabIndex = 3;
@@ -302,9 +302,9 @@ namespace Consulta_Pacientes
             // panelForm
             // 
             this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForm.Location = new System.Drawing.Point(225, 90);
+            this.panelForm.Location = new System.Drawing.Point(225, 84);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(1693, 513);
+            this.panelForm.Size = new System.Drawing.Size(1693, 519);
             this.panelForm.TabIndex = 4;
             // 
             // btnadmUser
