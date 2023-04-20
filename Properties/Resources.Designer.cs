@@ -83,6 +83,16 @@ namespace Consulta_Pacientes.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fundo_Info {
+            get {
+                object obj = ResourceManager.GetObject("Fundo Info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Fatima_Horizontal {
             get {
                 object obj = ResourceManager.GetObject("Logo-Fatima-Horizontal", resourceCulture);
@@ -96,6 +106,16 @@ namespace Consulta_Pacientes.Properties {
         internal static System.Drawing.Bitmap Logo_Fatima_vertical {
             get {
                 object obj = ResourceManager.GetObject("Logo-Fatima-vertical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_de_Login {
+            get {
+                object obj = ResourceManager.GetObject("Tela de Login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

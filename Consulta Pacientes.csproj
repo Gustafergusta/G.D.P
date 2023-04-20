@@ -302,6 +302,12 @@
   <ItemGroup>
     <None Include="Resources\fig_t1 copiar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de Login.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

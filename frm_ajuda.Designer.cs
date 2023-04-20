@@ -29,7 +29,6 @@ namespace Consulta_Pacientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ajuda));
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -91,7 +90,8 @@ namespace Consulta_Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Consulta_Pacientes.Properties.Resources.Fundo_Info;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1139, 537);
             this.Controls.Add(this.label1);

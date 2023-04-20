@@ -70,7 +70,7 @@ namespace Consulta_Pacientes
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja realmente fechar o aplicativo?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja realmente fechar o sistema?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 dto_menu.fechar = false;
                 Application.ExitThread();
@@ -92,7 +92,7 @@ namespace Consulta_Pacientes
         private void frm_menuNew_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (dto_menu.fechar == true)
-                if (MessageBox.Show("Deseja realmente fechar o aplicativo?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja realmente fechar o sistema?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Application.ExitThread();
                 }
