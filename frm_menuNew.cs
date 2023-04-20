@@ -92,10 +92,13 @@ namespace Consulta_Pacientes
         private void frm_menuNew_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (dto_menu.fechar == true)
+            {
                 if (MessageBox.Show("Deseja realmente fechar o sistema?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    Application.ExitThread();
+                    Application.ExitThread(); 
                 }
+                else { e.Cancel = true; }
+            }
         }
 
         private void btn_ajuda_Click(object sender, EventArgs e)
