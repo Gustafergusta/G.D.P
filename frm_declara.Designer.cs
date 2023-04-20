@@ -88,7 +88,7 @@ namespace Consulta_Pacientes
             this.cbNome.Location = new System.Drawing.Point(377, 35);
             this.cbNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbNome.Name = "cbNome";
-            this.cbNome.Size = new System.Drawing.Size(712, 29);
+            this.cbNome.Size = new System.Drawing.Size(712, 36);
             this.cbNome.TabIndex = 3;
             this.cbNome.SelectedIndexChanged += new System.EventHandler(this.cbNome_SelectedIndexChanged);
             // 
@@ -97,7 +97,7 @@ namespace Consulta_Pacientes
             this.txtPront.Location = new System.Drawing.Point(141, 35);
             this.txtPront.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPront.Name = "txtPront";
-            this.txtPront.Size = new System.Drawing.Size(136, 29);
+            this.txtPront.Size = new System.Drawing.Size(136, 34);
             this.txtPront.TabIndex = 4;
             this.txtPront.TextChanged += new System.EventHandler(this.txtPront_TextChanged);
             this.txtPront.Leave += new System.EventHandler(this.txtPront_Leave);
@@ -107,7 +107,7 @@ namespace Consulta_Pacientes
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 21);
+            this.label1.Size = new System.Drawing.Size(109, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "Prontuário:";
             // 
@@ -131,7 +131,7 @@ namespace Consulta_Pacientes
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(300, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 21);
+            this.label2.Size = new System.Drawing.Size(70, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "Nome:";
             // 
@@ -166,7 +166,7 @@ namespace Consulta_Pacientes
             // 
             // frm_declara
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1708, 847);

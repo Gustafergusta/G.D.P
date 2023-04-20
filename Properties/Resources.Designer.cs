@@ -63,6 +63,46 @@ namespace Consulta_Pacientes.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CAMINHO {
+            get {
+                object obj = ResourceManager.GetObject("CAMINHO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fig_t1_copiar {
+            get {
+                object obj = ResourceManager.GetObject("fig_t1 copiar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Fatima_Horizontal {
+            get {
+                object obj = ResourceManager.GetObject("Logo-Fatima-Horizontal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Fatima_vertical {
+            get {
+                object obj = ResourceManager.GetObject("Logo-Fatima-vertical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap VERMELHO_BRANCO {
             get {
                 object obj = ResourceManager.GetObject("VERMELHO-BRANCO", resourceCulture);

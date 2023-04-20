@@ -8,7 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
-using FontAwesome.Sharp;
+using Consulta_Pacientes.Code.DTO;
 
 namespace Consulta_Pacientes.Code.BLL
 {
@@ -17,12 +17,22 @@ namespace Consulta_Pacientes.Code.BLL
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        dto_login dtologin = new dto_login();
 
         public void initialize(Panel panelEsquerdo)
         {
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 61);
+            leftBorderBtn.Size = new Size(7, 49);
             panelEsquerdo.Controls.Add(leftBorderBtn);
+        }
+
+        public void nivelacesso(Label lblNome, IconButton btngerenUser)
+        {
+            lblNome.Text = dtologin.DTO_NomeCompleto;
+            if(dtologin.DTO_perfil != "Admin")
+            {
+                btngerenUser.Visible = false;
+            }
         }
 
         public void ActivateButton(object sendBtn, Color color, IconPictureBox icoMenu)

@@ -49,7 +49,7 @@ namespace Consulta_Pacientes
             if (btnAcao.Text == "Cadastrar")
             {
                 dto.DTO_nomeuser = txtNome.Text;
-                dto.DTO_nomelogin = txtUser.Text;
+                dto.DTO_nomelogin = txtUser.Text.ToLower();
                 dto.DTO_dpto = cbDpto.Text;
                 dto.DTO_peril = cbPerfil.Text;
                 if (txtSenha.Text == txtSenha2.Text) 
@@ -65,7 +65,7 @@ namespace Consulta_Pacientes
             if (btnAcao.Text == "Atualizar")
             {
                 dto.DTO_nomeuser = txtNome.Text;
-                dto.DTO_nomelogin = txtUser.Text;
+                dto.DTO_nomelogin = txtUser.Text.ToLower();
                 dto.DTO_dpto = cbDpto.Text;
                 dto.DTO_peril = cbPerfil.Text;
                 dto.DTO_coduser = Convert.ToInt32(lblcod.Text);

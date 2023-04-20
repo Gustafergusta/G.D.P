@@ -65,11 +65,11 @@ namespace Consulta_Pacientes
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(72, 62);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(391, 76);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(1083, 94);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1444, 116);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuários";
@@ -77,10 +77,10 @@ namespace Consulta_Pacientes
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(963, 34);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Location = new System.Drawing.Point(1284, 42);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(106, 47);
+            this.btnCancelar.Size = new System.Drawing.Size(141, 58);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -90,11 +90,11 @@ namespace Consulta_Pacientes
             // 
             this.groupBox3.Controls.Add(this.btnNovo);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(760, 20);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(1013, 25);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(195, 63);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(260, 78);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cadastro de Usuário";
@@ -102,10 +102,10 @@ namespace Consulta_Pacientes
             // btnNovo
             // 
             this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Location = new System.Drawing.Point(43, 23);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNovo.Location = new System.Drawing.Point(57, 28);
+            this.btnNovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(106, 31);
+            this.btnNovo.Size = new System.Drawing.Size(141, 38);
             this.btnNovo.TabIndex = 4;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
@@ -117,11 +117,11 @@ namespace Consulta_Pacientes
             this.groupBox2.Controls.Add(this.btnAtualizar);
             this.groupBox2.Controls.Add(this.cbNomeUsers);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(4, 21);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(5, 26);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(747, 62);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(996, 76);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Usuário Cadastrados";
@@ -129,10 +129,10 @@ namespace Consulta_Pacientes
             // btnExcluir
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(670, 23);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExcluir.Location = new System.Drawing.Point(820, 25);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(73, 31);
+            this.btnExcluir.Size = new System.Drawing.Size(140, 38);
             this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -141,10 +141,10 @@ namespace Consulta_Pacientes
             // btnAtualizar
             // 
             this.btnAtualizar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(572, 24);
-            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAtualizar.Location = new System.Drawing.Point(639, 25);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(94, 31);
+            this.btnAtualizar.Size = new System.Drawing.Size(147, 38);
             this.btnAtualizar.TabIndex = 2;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
@@ -154,10 +154,10 @@ namespace Consulta_Pacientes
             // 
             this.cbNomeUsers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNomeUsers.FormattingEnabled = true;
-            this.cbNomeUsers.Location = new System.Drawing.Point(4, 20);
-            this.cbNomeUsers.Margin = new System.Windows.Forms.Padding(2);
+            this.cbNomeUsers.Location = new System.Drawing.Point(5, 25);
+            this.cbNomeUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbNomeUsers.Name = "cbNomeUsers";
-            this.cbNomeUsers.Size = new System.Drawing.Size(434, 29);
+            this.cbNomeUsers.Size = new System.Drawing.Size(577, 36);
             this.cbNomeUsers.TabIndex = 1;
             this.cbNomeUsers.SelectedIndexChanged += new System.EventHandler(this.cbNomeUsers_SelectedIndexChanged);
             // 
@@ -180,40 +180,38 @@ namespace Consulta_Pacientes
             this.panelUser.Controls.Add(this.label3);
             this.panelUser.Controls.Add(this.label2);
             this.panelUser.Controls.Add(this.label1);
-            this.panelUser.Location = new System.Drawing.Point(72, 160);
-            this.panelUser.Margin = new System.Windows.Forms.Padding(2);
+            this.panelUser.Location = new System.Drawing.Point(391, 197);
+            this.panelUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(1083, 399);
+            this.panelUser.Size = new System.Drawing.Size(1443, 490);
             this.panelUser.TabIndex = 4;
             // 
             // lblcod
             // 
             this.lblcod.AutoSize = true;
             this.lblcod.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcod.Location = new System.Drawing.Point(299, 26);
-            this.lblcod.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblcod.Location = new System.Drawing.Point(399, 32);
             this.lblcod.Name = "lblcod";
-            this.lblcod.Size = new System.Drawing.Size(0, 21);
+            this.lblcod.Size = new System.Drawing.Size(0, 28);
             this.lblcod.TabIndex = 16;
             // 
             // lbltxtcod
             // 
             this.lbltxtcod.AutoSize = true;
             this.lbltxtcod.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltxtcod.Location = new System.Drawing.Point(38, 25);
-            this.lbltxtcod.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltxtcod.Location = new System.Drawing.Point(51, 31);
             this.lbltxtcod.Name = "lbltxtcod";
-            this.lbltxtcod.Size = new System.Drawing.Size(212, 21);
+            this.lbltxtcod.Size = new System.Drawing.Size(262, 28);
             this.lbltxtcod.TabIndex = 15;
             this.lbltxtcod.Text = "Código de Cadastro ............:";
             // 
             // btnAcao
             // 
             this.btnAcao.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcao.Location = new System.Drawing.Point(486, 312);
-            this.btnAcao.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAcao.Location = new System.Drawing.Point(648, 384);
+            this.btnAcao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAcao.Name = "btnAcao";
-            this.btnAcao.Size = new System.Drawing.Size(106, 47);
+            this.btnAcao.Size = new System.Drawing.Size(141, 58);
             this.btnAcao.TabIndex = 12;
             this.btnAcao.Text = "Cancelar";
             this.btnAcao.UseVisualStyleBackColor = true;
@@ -222,21 +220,21 @@ namespace Consulta_Pacientes
             // txtSenha2
             // 
             this.txtSenha2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha2.Location = new System.Drawing.Point(301, 183);
-            this.txtSenha2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSenha2.Location = new System.Drawing.Point(401, 225);
+            this.txtSenha2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSenha2.Name = "txtSenha2";
             this.txtSenha2.PasswordChar = '*';
-            this.txtSenha2.Size = new System.Drawing.Size(221, 29);
+            this.txtSenha2.Size = new System.Drawing.Size(293, 34);
             this.txtSenha2.TabIndex = 10;
             // 
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(302, 151);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSenha.Location = new System.Drawing.Point(403, 186);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(221, 29);
+            this.txtSenha.Size = new System.Drawing.Size(293, 34);
             this.txtSenha.TabIndex = 9;
             this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
             this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
@@ -244,19 +242,19 @@ namespace Consulta_Pacientes
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(302, 118);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUser.Location = new System.Drawing.Point(403, 145);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(221, 29);
+            this.txtUser.Size = new System.Drawing.Size(293, 34);
             this.txtUser.TabIndex = 8;
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(301, 51);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNome.Location = new System.Drawing.Point(401, 63);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(394, 29);
+            this.txtNome.Size = new System.Drawing.Size(524, 34);
             this.txtNome.TabIndex = 6;
             // 
             // cbPerfil
@@ -266,10 +264,10 @@ namespace Consulta_Pacientes
             this.cbPerfil.Items.AddRange(new object[] {
             "Admin",
             "Consulta"});
-            this.cbPerfil.Location = new System.Drawing.Point(302, 216);
-            this.cbPerfil.Margin = new System.Windows.Forms.Padding(2);
+            this.cbPerfil.Location = new System.Drawing.Point(403, 266);
+            this.cbPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbPerfil.Name = "cbPerfil";
-            this.cbPerfil.Size = new System.Drawing.Size(221, 29);
+            this.cbPerfil.Size = new System.Drawing.Size(293, 36);
             this.cbPerfil.TabIndex = 11;
             // 
             // cbDpto
@@ -280,20 +278,19 @@ namespace Consulta_Pacientes
             "Recepção",
             "Administrativo",
             "T.I."});
-            this.cbDpto.Location = new System.Drawing.Point(302, 86);
-            this.cbDpto.Margin = new System.Windows.Forms.Padding(2);
+            this.cbDpto.Location = new System.Drawing.Point(403, 106);
+            this.cbDpto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDpto.Name = "cbDpto";
-            this.cbDpto.Size = new System.Drawing.Size(221, 29);
+            this.cbDpto.Size = new System.Drawing.Size(293, 36);
             this.cbDpto.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(34, 218);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(45, 268);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(215, 21);
+            this.label6.Size = new System.Drawing.Size(269, 28);
             this.label6.TabIndex = 9;
             this.label6.Text = "Perfil ........................................:";
             // 
@@ -301,10 +298,9 @@ namespace Consulta_Pacientes
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 185);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(45, 228);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(211, 21);
+            this.label5.Size = new System.Drawing.Size(267, 28);
             this.label5.TabIndex = 8;
             this.label5.Text = "Digite Novamente a Senha :";
             // 
@@ -312,10 +308,9 @@ namespace Consulta_Pacientes
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 153);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(45, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 21);
+            this.label4.Size = new System.Drawing.Size(269, 28);
             this.label4.TabIndex = 7;
             this.label4.Text = "Senha ......................................:";
             // 
@@ -323,10 +318,9 @@ namespace Consulta_Pacientes
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 88);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(45, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 21);
+            this.label3.Size = new System.Drawing.Size(270, 28);
             this.label3.TabIndex = 6;
             this.label3.Text = "Departamento .......................:";
             // 
@@ -334,10 +328,9 @@ namespace Consulta_Pacientes
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 120);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(45, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 21);
+            this.label2.Size = new System.Drawing.Size(267, 28);
             this.label2.TabIndex = 5;
             this.label2.Text = "Usuário ...................................:";
             // 
@@ -345,22 +338,21 @@ namespace Consulta_Pacientes
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 53);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(45, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 21);
+            this.label1.Size = new System.Drawing.Size(266, 28);
             this.label1.TabIndex = 4;
             this.label1.Text = "Nome do Colaborador ........:";
             // 
             // frm_cadUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1431, 716);
+            this.ClientSize = new System.Drawing.Size(1908, 881);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelUser);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_cadUser";
             this.Text = "Gerenciamento de Usuários";
             this.Load += new System.EventHandler(this.frm_cadUser_Load);

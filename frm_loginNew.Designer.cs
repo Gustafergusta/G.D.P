@@ -29,126 +29,132 @@ namespace Consulta_Pacientes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_loginNew));
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnLogar = new System.Windows.Forms.Button();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            this.linkEmail = new System.Windows.Forms.PictureBox();
+            this.linkGLPI = new System.Windows.Forms.PictureBox();
+            this.linlkWhats = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linkEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linkGLPI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linlkWhats)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(518, 147);
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUser.Location = new System.Drawing.Point(482, 141);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(456, 34);
+            this.txtUser.Size = new System.Drawing.Size(348, 27);
             this.txtUser.TabIndex = 0;
+            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(518, 222);
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenha.Location = new System.Drawing.Point(482, 189);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(456, 34);
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(348, 27);
             this.txtSenha.TabIndex = 1;
+            this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
             // 
             // btnLogar
             // 
-            this.btnLogar.Location = new System.Drawing.Point(706, 286);
+            this.btnLogar.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogar.FlatAppearance.BorderSize = 0;
+            this.btnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogar.Location = new System.Drawing.Point(589, 237);
             this.btnLogar.Name = "btnLogar";
-            this.btnLogar.Size = new System.Drawing.Size(153, 39);
+            this.btnLogar.Size = new System.Drawing.Size(113, 28);
             this.btnLogar.TabIndex = 2;
-            this.btnLogar.Text = "button1";
-            this.btnLogar.UseVisualStyleBackColor = true;
+            this.btnLogar.Text = "Acessar";
+            this.btnLogar.UseVisualStyleBackColor = false;
             this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             this.btnLogar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLogar_KeyDown);
             // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Podcast;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 42;
-            this.iconPictureBox1.Location = new System.Drawing.Point(358, 132);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(42, 49);
-            this.iconPictureBox1.TabIndex = 3;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Pager;
-            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 42;
-            this.iconPictureBox2.Location = new System.Drawing.Point(358, 204);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(42, 42);
-            this.iconPictureBox2.TabIndex = 4;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(134, 218);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 28);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "G.D.P.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 261);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(273, 28);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Gestão de Dados de Pacientes";
-            // 
             // iconPictureBox3
             // 
-            this.iconPictureBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.iconPictureBox3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.TimesSquare;
-            this.iconPictureBox3.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.White;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 41;
-            this.iconPictureBox3.Location = new System.Drawing.Point(932, 12);
+            this.iconPictureBox3.Location = new System.Drawing.Point(851, 3);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Size = new System.Drawing.Size(42, 41);
             this.iconPictureBox3.TabIndex = 7;
             this.iconPictureBox3.TabStop = false;
             this.iconPictureBox3.Click += new System.EventHandler(this.iconPictureBox3_Click);
             // 
+            // linkEmail
+            // 
+            this.linkEmail.BackColor = System.Drawing.Color.Transparent;
+            this.linkEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkEmail.Location = new System.Drawing.Point(385, 346);
+            this.linkEmail.Name = "linkEmail";
+            this.linkEmail.Size = new System.Drawing.Size(29, 28);
+            this.linkEmail.TabIndex = 8;
+            this.linkEmail.TabStop = false;
+            this.linkEmail.Click += new System.EventHandler(this.linkEmail_Click);
+            // 
+            // linkGLPI
+            // 
+            this.linkGLPI.BackColor = System.Drawing.Color.Transparent;
+            this.linkGLPI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkGLPI.Location = new System.Drawing.Point(427, 345);
+            this.linkGLPI.Name = "linkGLPI";
+            this.linkGLPI.Size = new System.Drawing.Size(29, 28);
+            this.linkGLPI.TabIndex = 9;
+            this.linkGLPI.TabStop = false;
+            this.linkGLPI.Click += new System.EventHandler(this.linkGLPI_Click);
+            // 
+            // linlkWhats
+            // 
+            this.linlkWhats.BackColor = System.Drawing.Color.Transparent;
+            this.linlkWhats.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linlkWhats.Location = new System.Drawing.Point(468, 346);
+            this.linlkWhats.Name = "linlkWhats";
+            this.linlkWhats.Size = new System.Drawing.Size(29, 28);
+            this.linlkWhats.TabIndex = 10;
+            this.linlkWhats.TabStop = false;
+            this.linlkWhats.Click += new System.EventHandler(this.linlkWhats_Click);
+            // 
             // frm_loginNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 463);
-            this.Controls.Add(this.iconPictureBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.iconPictureBox2);
-            this.Controls.Add(this.iconPictureBox1);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(895, 400);
+            this.Controls.Add(this.linlkWhats);
+            this.Controls.Add(this.linkGLPI);
+            this.Controls.Add(this.linkEmail);
             this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.iconPictureBox3);
             this.Controls.Add(this.txtUser);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_loginNew";
-            this.Text = "frm_loginNew";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.frm_loginNew_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linkEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linkGLPI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linlkWhats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,10 +165,9 @@ namespace Consulta_Pacientes
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnLogar;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private System.Windows.Forms.PictureBox linkEmail;
+        private System.Windows.Forms.PictureBox linkGLPI;
+        private System.Windows.Forms.PictureBox linlkWhats;
     }
 }

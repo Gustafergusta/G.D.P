@@ -17,14 +17,14 @@ namespace Consulta_Pacientes
             InitializeComponent();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.suporte.irmashospitaleiras.org");
-        }
-
-        private void iconPictureBox4_Click(object sender, EventArgs e)
+        private void iconPictureBox4_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.suporte.irmashospitaleiras.org");
         }
     }
 }

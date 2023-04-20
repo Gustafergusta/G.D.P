@@ -290,6 +290,18 @@
   <ItemGroup>
     <None Include="Resources\VERMELHO-BRANCO.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-Fatima-Horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAMINHO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-Fatima-vertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fig_t1 copiar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

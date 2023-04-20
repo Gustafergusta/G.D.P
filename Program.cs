@@ -16,7 +16,11 @@ namespace Consulta_Pacientes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new btnadmUser());
+
+            frm_loginNew form = new frm_loginNew();
+            form.Show();
+
+            Application.Run();
         }
     }
 }

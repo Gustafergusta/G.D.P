@@ -9,6 +9,7 @@ namespace Consulta_Pacientes.Code.DTO
     class dto_menu
     {
         public static string select_hosp;
+        public static bool fechar;
        
         /*private string select_hosp;
 

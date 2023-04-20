@@ -20,19 +20,21 @@ namespace Consulta_Pacientes
         public frm_loginNew()
         {
             InitializeComponent();
+            dto_menu.fechar = true;
         }
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            dto.DTO_user = txtUser.Text;
+            dto.DTO_user = txtUser.Text.ToLower();
             dto.DTO_senha = txtSenha.Text;
 
             // Realizar a verificação do usuário e senha no banco de dados ou em outra fonte de dados
             if (bll.passadados(dto))
             {
                 // Se o usuário e senha forem válidos, permitir o acesso à próxima tela
-                btnadmUser telaPrincipal = new btnadmUser();
+                frm_menuNew telaPrincipal = new frm_menuNew();
                 this.Hide();
+
                 telaPrincipal.ShowDialog();
                 this.Close();
             }
@@ -49,16 +51,26 @@ namespace Consulta_Pacientes
 
         private void btnLogar_KeyDown(object sender, KeyEventArgs e)
         {
+            
+        }
+
+        private void iconPictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            dto.DTO_user = txtUser.Text.ToLower();
+            dto.DTO_senha = txtSenha.Text;
+
             if (e.KeyCode == Keys.Enter)
             {
-                dto.DTO_user = txtUser.Text;
-                dto.DTO_senha = txtSenha.Text;
-
                 // Realizar a verificação do usuário e senha no banco de dados ou em outra fonte de dados
                 if (bll.passadados(dto))
                 {
                     // Se o usuário e senha forem válidos, permitir o acesso à próxima tela
-                    btnadmUser telaPrincipal = new btnadmUser();
+                    frm_menuNew telaPrincipal = new frm_menuNew();
                     this.Hide();
                     telaPrincipal.ShowDialog();
                     this.Close();
@@ -70,9 +82,19 @@ namespace Consulta_Pacientes
             }
         }
 
-        private void iconPictureBox3_Click(object sender, EventArgs e)
+        private void linkEmail_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Diagnostics.Process.Start("mailto:" + "grupo.ti@irmashospitaleiras.org" + "?subject=" + Uri.EscapeDataString("Suporte G.P.D."));
+        }
+
+        private void linkGLPI_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://irmashospitaleiras.org/glpi");
+        }
+
+        private void linlkWhats_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://api.whatsapp.com/send/?phone=5511976210829&text&type=phone_number&app_absent=0");
         }
     }
 }

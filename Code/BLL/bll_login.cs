@@ -14,7 +14,7 @@ namespace Consulta_Pacientes.Code.BLL
     class bll_login
     {
         conexao conn = new conexao();
-        string loginbd, senhabd;
+        string senhabd;
 
         public bool passadados(dto_login dto)
         {
