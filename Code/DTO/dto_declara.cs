@@ -17,8 +17,8 @@ namespace Consulta_Pacientes.Code.DTO
             get { return DTONome; }
         }
 
-        private static int DTOpront;
-        public int DTO_pront
+        private static string DTOpront;
+        public string DTO_pront
         {
             set { DTOpront = value; }
 

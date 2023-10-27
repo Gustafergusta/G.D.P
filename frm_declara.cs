@@ -52,7 +52,7 @@ namespace Consulta_Pacientes
                 reportViewer1.Visible = true;
                 reportViewer2.Visible = false;
                 dto.DTO_Nome = cbNome.Text;
-                dto.DTO_pront = Convert.ToInt32(txtPront.Text);
+                dto.DTO_pront = txtPront.Text;
 
                 reportViewer1.LocalReport.DataSources.Clear();
 
@@ -101,11 +101,9 @@ namespace Consulta_Pacientes
                 reportViewer1.Visible = false;
                 reportViewer2.Visible = true;
                 dto.DTO_Nome = cbNome.Text;
-                dto.DTO_pront = Convert.ToInt32(txtPront.Text);
+                dto.DTO_pront = txtPront.Text;
 
                 reportViewer2.LocalReport.DataSources.Clear();
-
-                int x = Convert.ToInt32(txtPront.Text);
 
                 ReportDataSource rds = new ReportDataSource("dsSCID", bll.RelaSCID(dto));
                 this.reportViewer2.LocalReport.DataSources.Add(rds);
