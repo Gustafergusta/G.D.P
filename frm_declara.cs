@@ -15,23 +15,31 @@ namespace Consulta_Pacientes
 {
     public partial class frm_declara : Form
     {
+        // INSTANCIANDO DADOS E REGRAS DE DOMINIO
         dto_declara dto = new dto_declara();
         bll_declara bll = new bll_declara();
+
+        // INSTANCIANDO TELA DE CARREGAMENTO
+        frm_splashGrid splash = new frm_splashGrid();
+
+        // RECUPERANDO ACESSO AO MENU QUE ESTÁ ABERTO PARA DESABILITAR AS OPÇÕES ENQUANTO CARREGA OS DADOS
+        frm_menuNew menuForm = Application.OpenForms.OfType<frm_menuNew>().FirstOrDefault();
+
+        // ARRAY PARA JUNTAR TODOS OS COMPONESTES PRESENTE NO FORM ABERTO PARA DESABILITAR ENQUANTO CARREGA DADOS
+        List<Control> allControls = new List<Control>();
 
 
         public frm_declara()
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frm_declara_Load(object sender, EventArgs e)
-        {
-            bll.preencheCb(cbNome);
+        {   
+            this.splash = new frm_splashGrid();
+            this.splash.Show();
+
+            backgroundWorker1.RunWorkerAsync();
+
             reportViewer1.Visible = false;
             reportViewer2.Visible = false;
         }
@@ -79,7 +87,6 @@ namespace Consulta_Pacientes
             {
                 dto_declara.DTOVerifica = false;
             }
-            
         }
 
         private void txtPront_Leave(object sender, EventArgs e)
@@ -113,6 +120,37 @@ namespace Consulta_Pacientes
             else
             {
                 MessageBox.Show("Para emitir a declaração, favor preencher os campos Prontuário e Nome do Paciente.");
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            allControls.AddRange(this.Controls.Cast<Control>());
+            allControls.AddRange(menuForm.Controls.Cast<Control>());
+
+            foreach (Control control in allControls)
+            {
+                control.Invoke(new Action(() =>
+                {
+                    control.Enabled = false;
+                }));
+            }
+
+            e.Result = bll.preencheCb(cbNome);
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            this.splash.Close();
+
+            foreach (Control control in allControls)
+            {
+                control.Enabled = true;
+            }
+
+            if (e.Error != null)
+            {
+                MessageBox.Show("Erro ao carregar dados: " + e.Error, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -625,7 +625,7 @@
             <Top>3.95676cm</Top>
             <Left>0.42479cm</Left>
             <Height>1.87733cm</Height>
-            <Width>18.05449cm</Width>
+            <Width>18.05448cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1005,7 +1005,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>1.17546cm</Height>
+          <Height>1.10489cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>

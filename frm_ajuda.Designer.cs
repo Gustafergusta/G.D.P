@@ -84,7 +84,7 @@ namespace Consulta_Pacientes
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 19);
             this.label1.TabIndex = 33;
-            this.label1.Text = "1.1";
+            this.label1.Text = "1.2";
             // 
             // frm_ajuda
             // 
@@ -102,6 +102,7 @@ namespace Consulta_Pacientes
             this.Name = "frm_ajuda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ajuda";
+            this.Load += new System.EventHandler(this.frm_ajuda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -16,7 +16,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\GustavoFernandes\Documents\T.I\Projetos C#\Consulta Pacientes\Exe\</PublishUrl>
+    <PublishUrl>C:\Users\GustavoFernandes\Downloads\G.D.P\Consulta Pacientes\EXE\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,7 +26,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <SupportUrl>https://www.sistemasirmas.org</SupportUrl>
+    <ErrorReportUrl>https://www.sistemasirmas.org</ErrorReportUrl>
+    <SuiteName>G. D. P.</SuiteName>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -224,6 +227,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splashGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashGrid.Designer.cs">
+      <DependentUpon>splashGrid.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frm_ajuda.resx">
       <DependentUpon>frm_ajuda.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +271,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\report_SCID .rdlc" />
     <EmbeddedResource Include="Relatorios\report_CCID.rdlc" />
+    <EmbeddedResource Include="splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashGrid.resx">
+      <DependentUpon>splashGrid.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Consulta_Pacientes.Relatorios.dadosRel.datasource" />
     <None Include="Properties\DataSources\Consulta_Pacientes.Relatorios.dadosRelSCID.datasource" />
@@ -307,6 +328,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Tela de Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscandodados.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carregando.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

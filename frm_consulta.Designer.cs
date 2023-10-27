@@ -30,6 +30,7 @@ namespace Consulta_Pacientes
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_pesq = new System.Windows.Forms.Button();
             this.rbPront = new System.Windows.Forms.RadioButton();
             this.txtProntuario = new System.Windows.Forms.TextBox();
             this.rbNasc = new System.Windows.Forms.RadioButton();
@@ -42,12 +43,14 @@ namespace Consulta_Pacientes
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dgvConsult = new System.Windows.Forms.DataGridView();
             this.lbl_msg = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsult)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_pesq);
             this.groupBox1.Controls.Add(this.rbPront);
             this.groupBox1.Controls.Add(this.txtProntuario);
             this.groupBox1.Controls.Add(this.rbNasc);
@@ -68,14 +71,24 @@ namespace Consulta_Pacientes
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisa";
             // 
+            // btn_pesq
+            // 
+            this.btn_pesq.Location = new System.Drawing.Point(1499, 24);
+            this.btn_pesq.Name = "btn_pesq";
+            this.btn_pesq.Size = new System.Drawing.Size(157, 36);
+            this.btn_pesq.TabIndex = 25;
+            this.btn_pesq.Text = "Pesquisar";
+            this.btn_pesq.UseVisualStyleBackColor = true;
+            this.btn_pesq.Click += new System.EventHandler(this.btn_pesq_Click);
+            // 
             // rbPront
             // 
             this.rbPront.AutoSize = true;
             this.rbPront.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbPront.Location = new System.Drawing.Point(1375, 26);
+            this.rbPront.Location = new System.Drawing.Point(1238, 26);
             this.rbPront.Margin = new System.Windows.Forms.Padding(2);
             this.rbPront.Name = "rbPront";
-            this.rbPront.Size = new System.Drawing.Size(105, 25);
+            this.rbPront.Size = new System.Drawing.Size(130, 32);
             this.rbPront.TabIndex = 24;
             this.rbPront.TabStop = true;
             this.rbPront.Text = "Prontuário:";
@@ -85,10 +98,10 @@ namespace Consulta_Pacientes
             // txtProntuario
             // 
             this.txtProntuario.Font = new System.Drawing.Font("Segoe UI", 12.2F);
-            this.txtProntuario.Location = new System.Drawing.Point(1499, 25);
+            this.txtProntuario.Location = new System.Drawing.Point(1362, 25);
             this.txtProntuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtProntuario.Name = "txtProntuario";
-            this.txtProntuario.Size = new System.Drawing.Size(132, 29);
+            this.txtProntuario.Size = new System.Drawing.Size(132, 35);
             this.txtProntuario.TabIndex = 22;
             this.txtProntuario.TextChanged += new System.EventHandler(this.txtProntuario_TextChanged);
             // 
@@ -96,10 +109,10 @@ namespace Consulta_Pacientes
             // 
             this.rbNasc.AutoSize = true;
             this.rbNasc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNasc.Location = new System.Drawing.Point(979, 25);
+            this.rbNasc.Location = new System.Drawing.Point(899, 25);
             this.rbNasc.Margin = new System.Windows.Forms.Padding(2);
             this.rbNasc.Name = "rbNasc";
-            this.rbNasc.Size = new System.Drawing.Size(171, 25);
+            this.rbNasc.Size = new System.Drawing.Size(214, 32);
             this.rbNasc.TabIndex = 15;
             this.rbNasc.TabStop = true;
             this.rbNasc.Text = "Data de Nascimento:";
@@ -110,10 +123,10 @@ namespace Consulta_Pacientes
             // 
             this.rbRg.AutoSize = true;
             this.rbRg.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbRg.Location = new System.Drawing.Point(732, 25);
+            this.rbRg.Location = new System.Drawing.Point(677, 25);
             this.rbRg.Margin = new System.Windows.Forms.Padding(2);
             this.rbRg.Name = "rbRg";
-            this.rbRg.Size = new System.Drawing.Size(52, 25);
+            this.rbRg.Size = new System.Drawing.Size(63, 32);
             this.rbRg.TabIndex = 14;
             this.rbRg.TabStop = true;
             this.rbRg.Text = "RG:";
@@ -124,10 +137,10 @@ namespace Consulta_Pacientes
             // 
             this.rbCpf.AutoSize = true;
             this.rbCpf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCpf.Location = new System.Drawing.Point(495, 27);
+            this.rbCpf.Location = new System.Drawing.Point(468, 27);
             this.rbCpf.Margin = new System.Windows.Forms.Padding(2);
             this.rbCpf.Name = "rbCpf";
-            this.rbCpf.Size = new System.Drawing.Size(58, 25);
+            this.rbCpf.Size = new System.Drawing.Size(70, 32);
             this.rbCpf.TabIndex = 13;
             this.rbCpf.TabStop = true;
             this.rbCpf.Text = "CPF:";
@@ -141,7 +154,7 @@ namespace Consulta_Pacientes
             this.rbNome.Location = new System.Drawing.Point(8, 26);
             this.rbNome.Margin = new System.Windows.Forms.Padding(2);
             this.rbNome.Name = "rbNome";
-            this.rbNome.Size = new System.Drawing.Size(74, 25);
+            this.rbNome.Size = new System.Drawing.Size(91, 32);
             this.rbNome.TabIndex = 12;
             this.rbNome.TabStop = true;
             this.rbNome.Text = "Nome:";
@@ -151,32 +164,32 @@ namespace Consulta_Pacientes
             // mskNasci
             // 
             this.mskNasci.Font = new System.Drawing.Font("Segoe UI", 12.2F);
-            this.mskNasci.Location = new System.Drawing.Point(1193, 25);
+            this.mskNasci.Location = new System.Drawing.Point(1113, 25);
             this.mskNasci.Margin = new System.Windows.Forms.Padding(2);
             this.mskNasci.Mask = "00/00/0000";
             this.mskNasci.Name = "mskNasci";
-            this.mskNasci.Size = new System.Drawing.Size(121, 29);
+            this.mskNasci.Size = new System.Drawing.Size(121, 35);
             this.mskNasci.TabIndex = 12;
             this.mskNasci.TextChanged += new System.EventHandler(this.mskNasci_TextChanged);
             // 
             // txRG
             // 
             this.txRG.Font = new System.Drawing.Font("Segoe UI", 12.2F);
-            this.txRG.Location = new System.Drawing.Point(789, 24);
+            this.txRG.Location = new System.Drawing.Point(734, 24);
             this.txRG.Margin = new System.Windows.Forms.Padding(2);
             this.txRG.Name = "txRG";
-            this.txRG.Size = new System.Drawing.Size(155, 29);
+            this.txRG.Size = new System.Drawing.Size(155, 35);
             this.txRG.TabIndex = 11;
             this.txRG.TextChanged += new System.EventHandler(this.txRG_TextChanged);
             // 
             // mskCPF
             // 
             this.mskCPF.Font = new System.Drawing.Font("Segoe UI", 12.2F);
-            this.mskCPF.Location = new System.Drawing.Point(564, 25);
+            this.mskCPF.Location = new System.Drawing.Point(537, 25);
             this.mskCPF.Margin = new System.Windows.Forms.Padding(2);
             this.mskCPF.Mask = "000,000,000-00";
             this.mskCPF.Name = "mskCPF";
-            this.mskCPF.Size = new System.Drawing.Size(134, 29);
+            this.mskCPF.Size = new System.Drawing.Size(134, 35);
             this.mskCPF.TabIndex = 10;
             this.mskCPF.TextChanged += new System.EventHandler(this.mskCPF_TextChanged);
             // 
@@ -187,7 +200,7 @@ namespace Consulta_Pacientes
             this.txtNome.Location = new System.Drawing.Point(96, 24);
             this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(363, 29);
+            this.txtNome.Size = new System.Drawing.Size(363, 35);
             this.txtNome.TabIndex = 5;
             this.txtNome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -214,13 +227,19 @@ namespace Consulta_Pacientes
             this.lbl_msg.Location = new System.Drawing.Point(280, 362);
             this.lbl_msg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_msg.Name = "lbl_msg";
-            this.lbl_msg.Size = new System.Drawing.Size(166, 65);
+            this.lbl_msg.Size = new System.Drawing.Size(205, 81);
             this.lbl_msg.TabIndex = 11;
             this.lbl_msg.Text = "label9";
+            this.lbl_msg.Visible = false;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
             // frm_consulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1691, 881);
@@ -254,5 +273,7 @@ namespace Consulta_Pacientes
         private System.Windows.Forms.RadioButton rbNome;
         private System.Windows.Forms.RadioButton rbPront;
         private System.Windows.Forms.TextBox txtProntuario;
+        private System.Windows.Forms.Button btn_pesq;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

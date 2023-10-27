@@ -29,6 +29,7 @@ namespace Consulta_Pacientes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ficha));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,7 +72,7 @@ namespace Consulta_Pacientes
             this.label1.Location = new System.Drawing.Point(243, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 19);
+            this.label1.Size = new System.Drawing.Size(95, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Prontuário:";
             // 
@@ -82,7 +83,7 @@ namespace Consulta_Pacientes
             this.label2.Location = new System.Drawing.Point(4, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 19);
+            this.label2.Size = new System.Drawing.Size(61, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome:";
             // 
@@ -93,7 +94,7 @@ namespace Consulta_Pacientes
             this.label4.Location = new System.Drawing.Point(77, 40);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 19);
+            this.label4.Size = new System.Drawing.Size(170, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Data de Nascimento:";
             // 
@@ -104,7 +105,7 @@ namespace Consulta_Pacientes
             this.label5.Location = new System.Drawing.Point(4, 39);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 19);
+            this.label5.Size = new System.Drawing.Size(51, 23);
             this.label5.TabIndex = 4;
             this.label5.Text = "Sexo:";
             // 
@@ -115,7 +116,7 @@ namespace Consulta_Pacientes
             this.label6.Location = new System.Drawing.Point(5, 87);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 19);
+            this.label6.Size = new System.Drawing.Size(89, 23);
             this.label6.TabIndex = 5;
             this.label6.Text = "Nome Pai:";
             // 
@@ -126,7 +127,7 @@ namespace Consulta_Pacientes
             this.label7.Location = new System.Drawing.Point(5, 63);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 19);
+            this.label7.Size = new System.Drawing.Size(100, 23);
             this.label7.TabIndex = 6;
             this.label7.Text = "Nome Mãe:";
             // 
@@ -137,7 +138,7 @@ namespace Consulta_Pacientes
             this.label8.Location = new System.Drawing.Point(5, 112);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 19);
+            this.label8.Size = new System.Drawing.Size(130, 23);
             this.label8.TabIndex = 7;
             this.label8.Text = "Nome Conjuge:";
             // 
@@ -148,7 +149,7 @@ namespace Consulta_Pacientes
             this.label9.Location = new System.Drawing.Point(10, 18);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 19);
+            this.label9.Size = new System.Drawing.Size(44, 23);
             this.label9.TabIndex = 8;
             this.label9.Text = "CPF:";
             // 
@@ -159,7 +160,7 @@ namespace Consulta_Pacientes
             this.label10.Location = new System.Drawing.Point(187, 18);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 19);
+            this.label10.Size = new System.Drawing.Size(37, 23);
             this.label10.TabIndex = 9;
             this.label10.Text = "RG:";
             // 
@@ -184,7 +185,7 @@ namespace Consulta_Pacientes
             this.label11.Location = new System.Drawing.Point(329, 200);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(173, 19);
+            this.label11.Size = new System.Drawing.Size(212, 23);
             this.label11.TabIndex = 11;
             this.label11.Text = "Atendimentos do Pacinete";
             // 
@@ -222,7 +223,7 @@ namespace Consulta_Pacientes
             this.lbl_nomeConj.Location = new System.Drawing.Point(115, 112);
             this.lbl_nomeConj.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_nomeConj.Name = "lbl_nomeConj";
-            this.lbl_nomeConj.Size = new System.Drawing.Size(53, 19);
+            this.lbl_nomeConj.Size = new System.Drawing.Size(64, 23);
             this.lbl_nomeConj.TabIndex = 26;
             this.lbl_nomeConj.Text = "label23";
             // 
@@ -233,7 +234,7 @@ namespace Consulta_Pacientes
             this.lbl_Sexo.Location = new System.Drawing.Point(49, 39);
             this.lbl_Sexo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Sexo.Name = "lbl_Sexo";
-            this.lbl_Sexo.Size = new System.Drawing.Size(23, 19);
+            this.lbl_Sexo.Size = new System.Drawing.Size(28, 23);
             this.lbl_Sexo.TabIndex = 21;
             this.lbl_Sexo.Text = "lbl";
             // 
@@ -244,7 +245,7 @@ namespace Consulta_Pacientes
             this.lbl_nomePai.Location = new System.Drawing.Point(89, 87);
             this.lbl_nomePai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_nomePai.Name = "lbl_nomePai";
-            this.lbl_nomePai.Size = new System.Drawing.Size(53, 19);
+            this.lbl_nomePai.Size = new System.Drawing.Size(64, 23);
             this.lbl_nomePai.TabIndex = 25;
             this.lbl_nomePai.Text = "label22";
             // 
@@ -255,7 +256,7 @@ namespace Consulta_Pacientes
             this.lbl_Nasci.Location = new System.Drawing.Point(221, 40);
             this.lbl_Nasci.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Nasci.Name = "lbl_Nasci";
-            this.lbl_Nasci.Size = new System.Drawing.Size(53, 19);
+            this.lbl_Nasci.Size = new System.Drawing.Size(64, 23);
             this.lbl_Nasci.TabIndex = 20;
             this.lbl_Nasci.Text = "label17";
             // 
@@ -266,7 +267,7 @@ namespace Consulta_Pacientes
             this.lbl_nomeMae.Location = new System.Drawing.Point(98, 63);
             this.lbl_nomeMae.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_nomeMae.Name = "lbl_nomeMae";
-            this.lbl_nomeMae.Size = new System.Drawing.Size(53, 19);
+            this.lbl_nomeMae.Size = new System.Drawing.Size(64, 23);
             this.lbl_nomeMae.TabIndex = 24;
             this.lbl_nomeMae.Text = "label21";
             // 
@@ -277,7 +278,7 @@ namespace Consulta_Pacientes
             this.lbl_nomeSocial.Location = new System.Drawing.Point(596, 15);
             this.lbl_nomeSocial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_nomeSocial.Name = "lbl_nomeSocial";
-            this.lbl_nomeSocial.Size = new System.Drawing.Size(53, 19);
+            this.lbl_nomeSocial.Size = new System.Drawing.Size(64, 23);
             this.lbl_nomeSocial.TabIndex = 19;
             this.lbl_nomeSocial.Text = "label16";
             // 
@@ -288,7 +289,7 @@ namespace Consulta_Pacientes
             this.lbl_Nome.Location = new System.Drawing.Point(58, 15);
             this.lbl_Nome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Nome.Name = "lbl_Nome";
-            this.lbl_Nome.Size = new System.Drawing.Size(53, 19);
+            this.lbl_Nome.Size = new System.Drawing.Size(64, 23);
             this.lbl_Nome.TabIndex = 18;
             this.lbl_Nome.Text = "label15";
             // 
@@ -299,7 +300,7 @@ namespace Consulta_Pacientes
             this.label12.Location = new System.Drawing.Point(499, 15);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 19);
+            this.label12.Size = new System.Drawing.Size(110, 23);
             this.label12.TabIndex = 15;
             this.label12.Text = "Nome Social:";
             // 
@@ -325,7 +326,7 @@ namespace Consulta_Pacientes
             this.lbl_Rg.Location = new System.Drawing.Point(223, 18);
             this.lbl_Rg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Rg.Name = "lbl_Rg";
-            this.lbl_Rg.Size = new System.Drawing.Size(53, 19);
+            this.lbl_Rg.Size = new System.Drawing.Size(64, 23);
             this.lbl_Rg.TabIndex = 23;
             this.lbl_Rg.Text = "label20";
             // 
@@ -336,7 +337,7 @@ namespace Consulta_Pacientes
             this.lbl_Cpf.Location = new System.Drawing.Point(50, 18);
             this.lbl_Cpf.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Cpf.Name = "lbl_Cpf";
-            this.lbl_Cpf.Size = new System.Drawing.Size(53, 19);
+            this.lbl_Cpf.Size = new System.Drawing.Size(64, 23);
             this.lbl_Cpf.TabIndex = 22;
             this.lbl_Cpf.Text = "label19";
             // 
@@ -347,7 +348,7 @@ namespace Consulta_Pacientes
             this.label3.Location = new System.Drawing.Point(407, 11);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 19);
+            this.label3.Size = new System.Drawing.Size(151, 23);
             this.label3.TabIndex = 15;
             this.label3.Text = "Prontuário Antigo:";
             // 
@@ -358,7 +359,7 @@ namespace Consulta_Pacientes
             this.lbl_Pront.Location = new System.Drawing.Point(331, 11);
             this.lbl_Pront.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Pront.Name = "lbl_Pront";
-            this.lbl_Pront.Size = new System.Drawing.Size(53, 19);
+            this.lbl_Pront.Size = new System.Drawing.Size(64, 23);
             this.lbl_Pront.TabIndex = 16;
             this.lbl_Pront.Text = "label13";
             this.lbl_Pront.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -370,7 +371,7 @@ namespace Consulta_Pacientes
             this.lbl_prontAnt.Location = new System.Drawing.Point(551, 11);
             this.lbl_prontAnt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_prontAnt.Name = "lbl_prontAnt";
-            this.lbl_prontAnt.Size = new System.Drawing.Size(53, 19);
+            this.lbl_prontAnt.Size = new System.Drawing.Size(64, 23);
             this.lbl_prontAnt.TabIndex = 17;
             this.lbl_prontAnt.Text = "label14";
             // 
@@ -381,7 +382,7 @@ namespace Consulta_Pacientes
             this.lbl_sistema.Location = new System.Drawing.Point(302, 35);
             this.lbl_sistema.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_sistema.Name = "lbl_sistema";
-            this.lbl_sistema.Size = new System.Drawing.Size(53, 19);
+            this.lbl_sistema.Size = new System.Drawing.Size(64, 23);
             this.lbl_sistema.TabIndex = 19;
             this.lbl_sistema.Text = "label14";
             // 
@@ -392,7 +393,7 @@ namespace Consulta_Pacientes
             this.label14.Location = new System.Drawing.Point(179, 35);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 19);
+            this.label14.Size = new System.Drawing.Size(129, 23);
             this.label14.TabIndex = 18;
             this.label14.Text = "Sistema Antigo:";
             // 
@@ -403,7 +404,7 @@ namespace Consulta_Pacientes
             this.lbl_dataCad.Location = new System.Drawing.Point(523, 35);
             this.lbl_dataCad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_dataCad.Name = "lbl_dataCad";
-            this.lbl_dataCad.Size = new System.Drawing.Size(53, 19);
+            this.lbl_dataCad.Size = new System.Drawing.Size(64, 23);
             this.lbl_dataCad.TabIndex = 21;
             this.lbl_dataCad.Text = "label14";
             // 
@@ -414,13 +415,13 @@ namespace Consulta_Pacientes
             this.label15.Location = new System.Drawing.Point(407, 35);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 19);
+            this.label15.Size = new System.Drawing.Size(123, 23);
             this.label15.TabIndex = 20;
             this.label15.Text = "Data Cadastro:";
             // 
             // frm_ficha
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(845, 553);
@@ -436,6 +437,7 @@ namespace Consulta_Pacientes
             this.Controls.Add(this.dgv_Atend);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frm_ficha";
