@@ -28,7 +28,10 @@ namespace Consulta_Pacientes.Code.BLL
 
         public void nivelacesso(Label lblNome, IconButton btngerenUser)
         {
-            lblNome.Text = dtologin.DTO_NomeCompleto;
+            string[] partesDoNome = dtologin.DTO_NomeCompleto.Split(' ');
+
+            lblNome.Text = partesDoNome[0];
+
             if(dtologin.DTO_perfil != "Admin")
             {
                 btngerenUser.Visible = false;
