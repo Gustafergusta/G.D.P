@@ -46,7 +46,7 @@ namespace Consulta_Pacientes
             // txtUser
             // 
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUser.Location = new System.Drawing.Point(482, 141);
+            this.txtUser.Location = new System.Drawing.Point(518, 141);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(348, 27);
             this.txtUser.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace Consulta_Pacientes
             // txtSenha
             // 
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Location = new System.Drawing.Point(482, 189);
+            this.txtSenha.Location = new System.Drawing.Point(518, 189);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(348, 27);
@@ -71,7 +71,7 @@ namespace Consulta_Pacientes
             this.btnLogar.FlatAppearance.BorderSize = 0;
             this.btnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogar.Location = new System.Drawing.Point(589, 237);
+            this.btnLogar.Location = new System.Drawing.Point(625, 237);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(113, 28);
             this.btnLogar.TabIndex = 2;
@@ -88,7 +88,7 @@ namespace Consulta_Pacientes
             this.iconPictureBox3.IconColor = System.Drawing.Color.White;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 41;
-            this.iconPictureBox3.Location = new System.Drawing.Point(851, 3);
+            this.iconPictureBox3.Location = new System.Drawing.Point(898, 3);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Size = new System.Drawing.Size(42, 41);
             this.iconPictureBox3.TabIndex = 7;
@@ -99,7 +99,7 @@ namespace Consulta_Pacientes
             // 
             this.linkEmail.BackColor = System.Drawing.Color.Transparent;
             this.linkEmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkEmail.Location = new System.Drawing.Point(385, 346);
+            this.linkEmail.Location = new System.Drawing.Point(409, 346);
             this.linkEmail.Name = "linkEmail";
             this.linkEmail.Size = new System.Drawing.Size(29, 28);
             this.linkEmail.TabIndex = 8;
@@ -110,7 +110,7 @@ namespace Consulta_Pacientes
             // 
             this.linkGLPI.BackColor = System.Drawing.Color.Transparent;
             this.linkGLPI.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkGLPI.Location = new System.Drawing.Point(427, 345);
+            this.linkGLPI.Location = new System.Drawing.Point(451, 345);
             this.linkGLPI.Name = "linkGLPI";
             this.linkGLPI.Size = new System.Drawing.Size(29, 28);
             this.linkGLPI.TabIndex = 9;
@@ -121,7 +121,7 @@ namespace Consulta_Pacientes
             // 
             this.linlkWhats.BackColor = System.Drawing.Color.Transparent;
             this.linlkWhats.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linlkWhats.Location = new System.Drawing.Point(468, 346);
+            this.linlkWhats.Location = new System.Drawing.Point(492, 346);
             this.linlkWhats.Name = "linlkWhats";
             this.linlkWhats.Size = new System.Drawing.Size(29, 28);
             this.linlkWhats.TabIndex = 10;
@@ -133,9 +133,9 @@ namespace Consulta_Pacientes
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Consulta_Pacientes.Properties.Resources.Tela_de_Login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(895, 400);
+            this.ClientSize = new System.Drawing.Size(944, 400);
             this.Controls.Add(this.linlkWhats);
             this.Controls.Add(this.linkGLPI);
             this.Controls.Add(this.linkEmail);
@@ -146,6 +146,7 @@ namespace Consulta_Pacientes
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_loginNew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

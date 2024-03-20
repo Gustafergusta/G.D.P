@@ -29,7 +29,9 @@ namespace Consulta_Pacientes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menuNew));
             this.panelEsquerdo = new System.Windows.Forms.Panel();
+            this.btn_ajuda = new FontAwesome.Sharp.IconButton();
             this.btngerenUser = new FontAwesome.Sharp.IconButton();
             this.btnDeclaracao = new FontAwesome.Sharp.IconButton();
             this.btnConsulta = new FontAwesome.Sharp.IconButton();
@@ -49,7 +51,6 @@ namespace Consulta_Pacientes
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelForm = new System.Windows.Forms.Panel();
             this.btn_info = new System.Windows.Forms.PictureBox();
-            this.btn_ajuda = new FontAwesome.Sharp.IconButton();
             this.panelEsquerdo.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -79,6 +80,28 @@ namespace Consulta_Pacientes
             this.panelEsquerdo.Name = "panelEsquerdo";
             this.panelEsquerdo.Size = new System.Drawing.Size(277, 881);
             this.panelEsquerdo.TabIndex = 1;
+            // 
+            // btn_ajuda
+            // 
+            this.btn_ajuda.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ajuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ajuda.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_ajuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_ajuda.Font = new System.Drawing.Font("Segoe UI Semibold", 8.2F, System.Drawing.FontStyle.Bold);
+            this.btn_ajuda.ForeColor = System.Drawing.Color.White;
+            this.btn_ajuda.IconChar = FontAwesome.Sharp.IconChar.Bug;
+            this.btn_ajuda.IconColor = System.Drawing.Color.White;
+            this.btn_ajuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_ajuda.IconSize = 30;
+            this.btn_ajuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ajuda.Location = new System.Drawing.Point(0, 760);
+            this.btn_ajuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ajuda.Name = "btn_ajuda";
+            this.btn_ajuda.Size = new System.Drawing.Size(277, 33);
+            this.btn_ajuda.TabIndex = 11;
+            this.btn_ajuda.Text = "Suporte";
+            this.btn_ajuda.UseVisualStyleBackColor = false;
+            this.btn_ajuda.Click += new System.EventHandler(this.btn_ajuda_Click);
             // 
             // btngerenUser
             // 
@@ -155,6 +178,7 @@ namespace Consulta_Pacientes
             this.panel1.Location = new System.Drawing.Point(0, 86);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
+            this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panel1.Size = new System.Drawing.Size(277, 94);
             this.panel1.TabIndex = 0;
             // 
@@ -166,7 +190,7 @@ namespace Consulta_Pacientes
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 46;
-            this.iconPictureBox1.Location = new System.Drawing.Point(0, 28);
+            this.iconPictureBox1.Location = new System.Drawing.Point(65, 28);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(46, 66);
             this.iconPictureBox1.TabIndex = 1;
@@ -175,14 +199,15 @@ namespace Consulta_Pacientes
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblNome.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(212, 28);
+            this.lblNome.Location = new System.Drawing.Point(0, 28);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(65, 28);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "label2";
+            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -276,7 +301,7 @@ namespace Consulta_Pacientes
             this.panel2.Location = new System.Drawing.Point(277, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2262, 86);
+            this.panel2.Size = new System.Drawing.Size(1647, 86);
             this.panel2.TabIndex = 2;
             // 
             // label3
@@ -336,7 +361,7 @@ namespace Consulta_Pacientes
             this.panelShadow.Location = new System.Drawing.Point(277, 86);
             this.panelShadow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(2262, 10);
+            this.panelShadow.Size = new System.Drawing.Size(1647, 10);
             this.panelShadow.TabIndex = 3;
             // 
             // panelForm
@@ -346,7 +371,7 @@ namespace Consulta_Pacientes
             this.panelForm.Location = new System.Drawing.Point(277, 96);
             this.panelForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(2262, 785);
+            this.panelForm.Size = new System.Drawing.Size(1647, 785);
             this.panelForm.TabIndex = 4;
             // 
             // btn_info
@@ -359,38 +384,17 @@ namespace Consulta_Pacientes
             this.btn_info.TabIndex = 0;
             this.btn_info.TabStop = false;
             // 
-            // btn_ajuda
-            // 
-            this.btn_ajuda.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ajuda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ajuda.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_ajuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_ajuda.Font = new System.Drawing.Font("Segoe UI Semibold", 8.2F, System.Drawing.FontStyle.Bold);
-            this.btn_ajuda.ForeColor = System.Drawing.Color.White;
-            this.btn_ajuda.IconChar = FontAwesome.Sharp.IconChar.Bug;
-            this.btn_ajuda.IconColor = System.Drawing.Color.White;
-            this.btn_ajuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_ajuda.IconSize = 30;
-            this.btn_ajuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ajuda.Location = new System.Drawing.Point(0, 760);
-            this.btn_ajuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_ajuda.Name = "btn_ajuda";
-            this.btn_ajuda.Size = new System.Drawing.Size(277, 33);
-            this.btn_ajuda.TabIndex = 11;
-            this.btn_ajuda.Text = "Suporte";
-            this.btn_ajuda.UseVisualStyleBackColor = false;
-            this.btn_ajuda.Click += new System.EventHandler(this.btn_ajuda_Click);
-            // 
             // frm_menuNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2539, 881);
+            this.ClientSize = new System.Drawing.Size(1924, 881);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelEsquerdo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_menuNew";
             this.Text = "MENU";

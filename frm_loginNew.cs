@@ -89,7 +89,7 @@ namespace Consulta_Pacientes
 
         private void linkGLPI_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://irmashospitaleiras.org/glpi");
+            System.Diagnostics.Process.Start("https://sistemasirmas.org");
         }
 
         private void linlkWhats_Click(object sender, EventArgs e)

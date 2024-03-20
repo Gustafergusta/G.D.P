@@ -63,6 +63,16 @@ namespace Consulta_Pacientes.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buscandodados {
+            get {
+                object obj = ResourceManager.GetObject("buscandodados", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CAMINHO {
             get {
                 object obj = ResourceManager.GetObject("CAMINHO", resourceCulture);
@@ -73,9 +83,29 @@ namespace Consulta_Pacientes.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carregando {
+            get {
+                object obj = ResourceManager.GetObject("carregando", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fig_t1_copiar {
             get {
                 object obj = ResourceManager.GetObject("fig_t1 copiar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fundo_Info {
+            get {
+                object obj = ResourceManager.GetObject("Fundo Info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +126,16 @@ namespace Consulta_Pacientes.Properties {
         internal static System.Drawing.Bitmap Logo_Fatima_vertical {
             get {
                 object obj = ResourceManager.GetObject("Logo-Fatima-vertical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_de_Login {
+            get {
+                object obj = ResourceManager.GetObject("Tela de Login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

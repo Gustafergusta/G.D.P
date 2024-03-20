@@ -30,7 +30,7 @@ namespace Consulta_Pacientes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.btnsemCID = new FontAwesome.Sharp.IconButton();
             this.btncomCID = new FontAwesome.Sharp.IconButton();
             this.cbNome = new System.Windows.Forms.ComboBox();
@@ -42,6 +42,7 @@ namespace Consulta_Pacientes
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dadosRelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dadosRelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dadosRelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadosRelBindingSource1)).BeginInit();
@@ -137,9 +138,9 @@ namespace Consulta_Pacientes
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "dsCCID";
-            reportDataSource1.Value = this.dadosRelBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource4.Name = "dsCCID";
+            reportDataSource4.Value = this.dadosRelBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Consulta_Pacientes.Relatorios.report_CCID.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(24, 101);
             this.reportViewer1.Name = "reportViewer1";
@@ -164,6 +165,11 @@ namespace Consulta_Pacientes
             // 
             this.dadosRelBindingSource1.DataSource = typeof(Consulta_Pacientes.Relatorios.dadosRel);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
             // frm_declara
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
@@ -176,7 +182,7 @@ namespace Consulta_Pacientes
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_declara";
-            this.Text = "Declaração de Atendimentos";
+            this.Text = "Declaração de Esteve Internado";
             this.Load += new System.EventHandler(this.frm_declara_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -198,5 +204,6 @@ namespace Consulta_Pacientes
         private System.Windows.Forms.BindingSource dadosRelBindingSource;
         private System.Windows.Forms.BindingSource dadosRelBindingSource1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

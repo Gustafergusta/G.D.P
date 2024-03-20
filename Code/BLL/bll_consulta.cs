@@ -17,31 +17,45 @@ namespace Consulta_Pacientes.Code.BLL
         conexao conn = new conexao();
         dto_menu dto = new dto_menu();
 
-        public void listaGrid(DataGridView dg,Label lbl)
+        public bool listaGrid(DataGridView dg)
         {
-            NpgsqlCommand cmd = new NpgsqlCommand();
-            cmd.Connection = conn.conectarBD();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select cadpac.sistema as \"Sistema\", cadpac.nomepac as \"Nome\", cadpac.nomesocial as \"Nome Social\", cadpac.codpac as \"Prontuário\", cadpac.proantigo as \"Prontuário Ant.\", cadpac.cpfpac as \"CPF\", cadpac.rgpac as \"RG\", cadpac.cartaosus as \"Cartão SUS\", cadpac.sexo as \"Sexo\", cadpac.datanasc as \"Data Nascimento\", cadpac.nomepai as \"Nome Pai\", cadpac.nomemae as \"Nome Mãe\", cadpac.conjuge as \"Nome Conjuge\" from cadpac where empresa = '" + dto_menu.select_hosp + "' ORDER BY cadpac.nomepac ASC;";
-            NpgsqlDataReader dr = cmd.ExecuteReader();
+           try
+           {
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = conn.conectarBD();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select cadpac.sistema as \"Sistema\", cadpac.nomepac as \"Nome\", cadpac.nomesocial as \"Nome Social\", cadpac.codpac as \"Prontuário\", cadpac.proantigo as \"Prontuário Ant.\", cadpac.cpfpac as \"CPF\", cadpac.rgpac as \"RG\", cadpac.cartaosus as \"Cartão SUS\", cadpac.sexo as \"Sexo\", cadpac.datanasc as \"Data Nascimento\", cadpac.nomepai as \"Nome Pai\", cadpac.nomemae as \"Nome Mãe\", cadpac.conjuge as \"Nome Conjuge\" from cadpac where empresa = '" + dto_menu.select_hosp + "' ORDER BY cadpac.nomepac ASC;";
+                NpgsqlDataReader dr = cmd.ExecuteReader();
 
-            if (dr.HasRows)
-            {
-                lbl.Visible = false;
-                DataTable dt = new DataTable();
-                dt.Load(dr);
-                dg.DataSource = dt;
-                dg.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                if (dr.HasRows)
+                {
+                    DataTable dt = new DataTable();
+                    dt.Load(dr);
+                    dg.Invoke(new Action(() =>
+                    {
+                        dg.DataSource = dt;
+                        dg.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                    }));
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+                cmd.Dispose();
             }
-            else
+            catch (Exception ex)
             {
-                lbl.Visible = true;
-                lbl.Text = "Não existem dados para serem exibido.";
+                MessageBox.Show("Erro ao carregar dados: " + ex.Message,"Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return false;
             }
-            cmd.Dispose();
-            conn.desconectarBD();                
+            finally
+            {
+                conn.desconectarBD();
+            }
         }
-        public void consultanome(DataGridView dgv,TextBox a)
+        public void consultanome(DataGridView dgv,TextBox a, Label lbl)
         {
             NpgsqlCommand cmd = new NpgsqlCommand("select cadpac.sistema as \"Sistema\", cadpac.nomepac as \"Nome\", cadpac.nomesocial as \"Nome Social\", cadpac.codpac as \"Prontuário\", cadpac.proantigo as \"Prontuário Ant.\", cadpac.cpfpac as \"CPF\", cadpac.rgpac as \"RG\", cadpac.cartaosus as \"Cartão SUS\", cadpac.sexo as \"Sexo\", cadpac.datanasc as \"Data Nascimento\", cadpac.nomepai as \"Nome Pai\", cadpac.nomemae as \"Nome Mãe\", cadpac.conjuge as \"Nome Conjuge\" from cadpac where nomepac LIKE '%" + a.Text + "%' AND empresa = '" + dto_menu.select_hosp + "' ORDER BY cadpac.nomepac ASC;", conn.conectarBD());
             cmd.CommandType = CommandType.Text;
@@ -49,20 +63,48 @@ namespace Consulta_Pacientes.Code.BLL
             
             DataTable cliente = new DataTable();
             da.Fill(cliente);
-            dgv.DataSource = cliente;
+
+            if (cliente.Rows.Count > 0)
+            {
+                lbl.Visible = false;
+                dgv.DataSource = cliente;
+            }
+            else
+            {
+                dgv.DataSource = null;
+                lbl.Visible = true;
+                lbl.Text = "Não existem dados para serem exibido.";
+            }
+
+            cmd.Dispose();
             conn.desconectarBD();
         }
-        public void consultaCPF(DataGridView dgv, string a)
+
+        public void consultaCPF(DataGridView dgv, string a, Label lbl)
         {
             NpgsqlCommand cmd = new NpgsqlCommand("select cadpac.sistema as \"Sistema\", cadpac.nomepac as \"Nome\", cadpac.nomesocial as \"Nome Social\", cadpac.codpac as \"Prontuário\", cadpac.proantigo as \"Prontuário Ant.\", cadpac.cpfpac as \"CPF\", cadpac.rgpac as \"RG\", cadpac.cartaosus as \"Cartão SUS\", cadpac.sexo as \"Sexo\", cadpac.datanasc as \"Data Nascimento\", cadpac.nomepai as \"Nome Pai\", cadpac.nomemae as \"Nome Mãe\", cadpac.conjuge as \"Nome Conjuge\" from cadpac where CAST(cpfpac AS TEXT) LIKE '%" + a + "%' AND empresa = '" + dto_menu.select_hosp + "' ORDER BY cadpac.nomepac ASC;", conn.conectarBD());
             cmd.CommandType = CommandType.Text;
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
             DataTable cliente = new DataTable();
             da.Fill(cliente);
-            dgv.DataSource = cliente;
+
+            if (cliente.Rows.Count > 0)
+            {
+                lbl.Visible = false;
+                dgv.DataSource = cliente;
+            }
+            else
+            {
+                dgv.DataSource = null;
+                lbl.Visible = true;
+                lbl.Text = "Não existem dados para serem exibido.";
+            }
+
+            cmd.Dispose();
             conn.desconectarBD();
         }
-        public void consultarg(DataGridView dgv, TextBox a)
+
+        public void consultarg(DataGridView dgv, TextBox a, Label lbl)
         {
             NpgsqlCommand cmd = new NpgsqlCommand("select cadpac.sistema as \"Sistema\", cadpac.nomepac as \"Nome\", cadpac.nomesocial as \"Nome Social\", cadpac.codpac as \"Prontuário\", cadpac.proantigo as \"Prontuário Ant.\", cadpac.cpfpac as \"CPF\", cadpac.rgpac as \"RG\", cadpac.cartaosus as \"Cartão SUS\", cadpac.sexo as \"Sexo\", cadpac.datanasc as \"Data Nascimento\", cadpac.nomepai as \"Nome Pai\", cadpac.nomemae as \"Nome Mãe\", cadpac.conjuge as \"Nome Conjuge\" from cadpac where rgpac LIKE '%" + a.Text + "%' AND empresa = '" + dto_menu.select_hosp + "' ORDER BY cadpac.nomepac ASC;", conn.conectarBD());
             cmd.CommandType = CommandType.Text;
@@ -70,27 +112,68 @@ namespace Consulta_Pacientes.Code.BLL
 
             DataTable cliente = new DataTable();
             da.Fill(cliente);
-            dgv.DataSource = cliente;
+
+            if (cliente.Rows.Count > 0)
+            {
+                lbl.Visible = false;
+                dgv.DataSource = cliente;
+            }
+            else
+            {
+                dgv.DataSource = null;
+                lbl.Visible = true;
+                lbl.Text = "Não existem dados para serem exibido.";
+            }
+
+            cmd.Dispose();
             conn.desconectarBD();
         }
-        public void consultaDTNas(DataGridView dgv, string a)
+
+        public void consultaDTNas(DataGridView dgv, string a, Label lbl)
         {
             NpgsqlCommand cmd = new NpgsqlCommand("select cadpac.sistema as \"Sistema\", cadpac.nomepac as \"Nome\", cadpac.nomesocial as \"Nome Social\", cadpac.codpac as \"Prontuário\", cadpac.proantigo as \"Prontuário Ant.\", cadpac.cpfpac as \"CPF\", cadpac.rgpac as \"RG\", cadpac.cartaosus as \"Cartão SUS\", cadpac.sexo as \"Sexo\", cadpac.datanasc as \"Data Nascimento\", cadpac.nomepai as \"Nome Pai\", cadpac.nomemae as \"Nome Mãe\", cadpac.conjuge as \"Nome Conjuge\" from cadpac where CAST(datanasc AS TEXT) LIKE '%" + a + "%' AND empresa = '" + dto_menu.select_hosp + "' ORDER BY cadpac.nomepac ASC;", conn.conectarBD());
             cmd.CommandType = CommandType.Text;
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
             DataTable cliente = new DataTable();
             da.Fill(cliente);
-            dgv.DataSource = cliente;
+
+            if (cliente.Rows.Count > 0)
+            {
+                lbl.Visible = false;
+                dgv.DataSource = cliente;
+            }
+            else
+            {
+                dgv.DataSource = null;
+                lbl.Visible = true;
+                lbl.Text = "Não existem dados para serem exibido.";
+            }
+
+            cmd.Dispose();
             conn.desconectarBD();
         }
-        public void consultapront(DataGridView dgv, TextBox a)
+        
+        public void consultapront(DataGridView dgv, TextBox a, Label lbl)
         {
             NpgsqlCommand cmd = new NpgsqlCommand("select cadpac.sistema as \"Sistema\", cadpac.nomepac as \"Nome\", cadpac.nomesocial as \"Nome Social\", cadpac.codpac as \"Prontuário\", cadpac.proantigo as \"Prontuário Ant.\", cadpac.cpfpac as \"CPF\", cadpac.rgpac as \"RG\", cadpac.cartaosus as \"Cartão SUS\", cadpac.sexo as \"Sexo\", cadpac.datanasc as \"Data Nascimento\", cadpac.nomepai as \"Nome Pai\", cadpac.nomemae as \"Nome Mãe\", cadpac.conjuge as \"Nome Conjuge\" from cadpac where CAST(codpac AS TEXT) LIKE '%" + a.Text + "%' AND empresa = '" + dto_menu.select_hosp + "' ORDER BY cadpac.nomepac ASC;", conn.conectarBD());
             cmd.CommandType = CommandType.Text;
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
             DataTable cliente = new DataTable();
             da.Fill(cliente);
-            dgv.DataSource = cliente;
+            
+            if (cliente.Rows.Count > 0)
+            {
+                lbl.Visible = false;
+                dgv.DataSource = cliente;
+            }
+            else
+            {
+                dgv.DataSource = null;
+                lbl.Visible = true;
+                lbl.Text = "Não existem dados para serem exibido.";
+            }
+
+            cmd.Dispose();
             conn.desconectarBD();
         }
     }

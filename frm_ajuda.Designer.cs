@@ -29,7 +29,6 @@ namespace Consulta_Pacientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ajuda));
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -85,13 +84,14 @@ namespace Consulta_Pacientes
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 19);
             this.label1.TabIndex = 33;
-            this.label1.Text = "1.1";
+            this.label1.Text = "1.2";
             // 
             // frm_ajuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Consulta_Pacientes.Properties.Resources.Fundo_Info;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1139, 537);
             this.Controls.Add(this.label1);
@@ -102,6 +102,7 @@ namespace Consulta_Pacientes
             this.Name = "frm_ajuda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ajuda";
+            this.Load += new System.EventHandler(this.frm_ajuda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

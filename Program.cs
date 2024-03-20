@@ -17,7 +17,7 @@ namespace Consulta_Pacientes
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            frm_loginNew form = new frm_loginNew();
+            frm_splash form = new frm_splash();
             form.Show();
 
             Application.Run();

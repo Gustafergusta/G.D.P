@@ -10,10 +10,9 @@ using Consulta_Pacientes.Code.DTO;
 namespace Consulta_Pacientes.Code.DAL
 {
     class conexao
-    {
-        //NpgsqlConnection con = new NpgsqlConnection("Server=127.0.0.1;Port=5432;Database=bancocaminho01;User Id=postgres;Password=admpost;");
-               
-        private string connString = "Server=bancocaminho01.postgresql.dbaas.com.br;Port=5432;User Id=bancocaminho01;Password=Dticdev@2023;Database=bancocaminho01;";
+    {              
+        private string connString = "Server=bancogpd.postgresql.dbaas.com.br;Port=5432;User Id=bancogpd;Password=Dticdev@2023;Database=bancogpd;";
+        //private string connString = "Server=127.0.0.1;Port=5432;User Id=postgres;Password=admpost;Database=bancocaminho;";
         private static NpgsqlConnection conn;
 
         public NpgsqlConnection conectarBD()

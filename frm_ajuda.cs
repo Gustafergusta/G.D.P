@@ -24,7 +24,12 @@ namespace Consulta_Pacientes
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.suporte.irmashospitaleiras.org");
+            System.Diagnostics.Process.Start("https://www.sistemasirmas.org");
+        }
+
+        private void frm_ajuda_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -20,7 +20,8 @@ namespace Consulta_Pacientes.Code.BLL
             NpgsqlCommand cmd = new NpgsqlCommand();
             cmd.Connection = conn.conectarBD();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select codpac, proantigo, sistema, nomepac, nomesocial, datanasc, sexo, cpfpac, rgpac, nomemae, nomepai, conjuge, datcadast from cadpac where codpac = "+ dto.DTO_Prontuario +" and empresa ='" + dto_menu.select_hosp + "' ORDER BY cadpac.nomepac ASC;";
+            cmd.CommandText = "select codpac, proantigo, sistema, nomepac, nomesocial, datanasc, sexo, cpfpac, rgpac, nomemae, nomepai, conjuge, datcadast from cadpac where codpac = '"+ dto.DTO_Prontuario +"' and empresa ='" + dto_menu.select_hosp + "' ORDER BY cadpac.nomepac ASC;";
+
             NpgsqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -41,7 +42,7 @@ namespace Consulta_Pacientes.Code.BLL
 
             dr.Close();
 
-            cmd.CommandText = "select numatend as \"Num. Atendimento\", tipoatend as \"Tipo Atendimento\", datatend as \"Data Atendimento\", datasai as \"Data Alta\", cidprin as \"CID Princ.\", cidsec as \"CID Segund.\" from arqatend where codpac =" + dto.DTO_Prontuario + ";";
+            cmd.CommandText = "select numatend as \"Num. Atendimento\", tipoatend as \"Tipo Atendimento\", datatend as \"Data Atendimento\", datasai as \"Data Alta\", cidprin as \"CID Princ.\", cidsec as \"CID Segund.\" from arqatend where codpac ='" + dto.DTO_Prontuario + "';";
             cmd.CommandType = CommandType.Text;
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
 
